@@ -1,13 +1,13 @@
 const { exec } = require('child_process');
 const express = require('express');
 const app = express();
-const server = app.listen(8080);
+//const server = app.listen(8080);
 app.use(express.static('public'))
 
 console.log('My nodejs sv is running');
 
 const socket = require('socket.io');
-let io = socket(server);
+let io = socket(https://your-app.herokuapp.com);
 io.sockets.on('connection', (socket) => {
     console.log('New connection ' + socket.id);
     exec('amixer -D pulse get Master',(err, stdout, stderr) => {
