@@ -1,4 +1,4 @@
-var socket = io('http://localhost:8080');
+var socket = io('http://localhost:3000');
 //socket.emit('msg','how you doin');
 let lab = document.getElementById("lab");
 let control = document.getElementById("vol_control");

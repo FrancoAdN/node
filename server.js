@@ -1,7 +1,7 @@
 const { exec } = require('child_process');
 const express = require('express');
 const app = express();
-const server = app.listen(8080);
+const server = app.listen(3000);
 app.use(express.static('public'))
 
 console.log('My nodejs sv is running');
@@ -21,7 +21,6 @@ io.sockets.on('connection', (socket) => {
         socket.emit('gVol',vol)
     });
     
-//amixer -D pulse sset Master 10%
     socket.on('cVol', (data) => {
         exec('amixer -D pulse sset Master '+data+'%',(err, stdout, stderr) => {
             if (err) {
