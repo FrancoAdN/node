@@ -1,7 +1,7 @@
 const { exec } = require('child_process');
 const express = require('express');
 const app = express();
-const server = app.listen(3000);
+const server = app.listen(8000);
 app.use(express.static('public'))
 
 console.log('My nodejs sv is running');
